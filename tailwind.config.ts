@@ -3,6 +3,7 @@ import type { Config } from 'tailwindcss'
 import fluid, { extract, fontSize, screens } from 'fluid-tailwind'
 
 export default {
+  darkMode: ['class'],
   content: {
     files: ['./src/pages/**/*.{ts,tsx,mdx}', './src/components/**/*.{ts,tsx,mdx}', './src/app/**/*.{ts,tsx,mdx}'],
     extract,
@@ -23,18 +24,6 @@ export default {
         'brand-pink': '#f7d0e9',
         'brand-purple': '#692e54',
         'brand-gray': '#fffdf9',
-      },
-      keyframes: {
-        squiggle: {
-          '0%': { filter: 'url("#squiggle-0")' },
-          '25%': { filter: 'url("#squiggle-1")' },
-          '50%': { filter: 'url("#squiggle-2")' },
-          '75%': { filter: 'url("#squiggle-3")' },
-          '100%': { filter: 'url("#squiggle-4")' },
-        },
-      },
-      animation: {
-        squiggle: 'squiggle .5s infinite',
       },
     },
   },
