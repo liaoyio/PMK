@@ -17,11 +17,11 @@ export function Heading({
     <Comp
       className={clsx(
         'font-sans uppercase',
-        size === 'xl' && '~text-4xl/8xl',
-        size === 'lg' && '~text-4xl/7xl',
-        size === 'md' && '~text-3xl/5xl',
-        size === 'sm' && '~text-2xl/4xl',
-        size === 'xs' && '~text-lg/xl',
+        size === 'xl' && 'text-4xl md:8xl',
+        size === 'lg' && 'text-4xl md:7xl',
+        size === 'md' && 'text-3xl md:5xl',
+        size === 'sm' && 'text-2xl md:4xl',
+        size === 'xs' && 'text-lg md:xl',
         className,
       )}
     >

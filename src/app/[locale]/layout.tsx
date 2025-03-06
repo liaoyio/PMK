@@ -1,10 +1,24 @@
-import { fonts } from '@/components/povider/font'
+import TailwindIndicator from '@/components/povider/tailwind-indicator'
 import { routing } from '@/i18n/routing'
+import { cn } from '@/lib/cn'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
+import { Inter, Noto_Sans_JP } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import '@/styles/globals.css'
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'auto',
+})
+
+/* const noto_jp = Noto_Sans_JP({
+  subsets: ['latin'],
+  variable: '--font-noto-jp',
+  display: 'swap',
+})
+ */
 interface Props {
   children: React.ReactNode
   params: Promise<{ locale: string }>
@@ -37,10 +51,18 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={fonts}>
+      <body className={
+        cn(
+          inter.variable,
+          // noto_jp.variable,
+          'min-h-screen antialiased',
+        )
+      }
+      >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <TailwindIndicator />
       </body>
     </html>
   )

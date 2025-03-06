@@ -5,14 +5,6 @@ export const routing = defineRouting({
   locales: ['en', 'zh', 'de'],
   // Used when no locale matches
   defaultLocale: 'en',
-  pathnames: {
-    '/': '/',
-    /* '/about': {
-      en: '/about-us',
-      de: '/about',
-    }, */
-  },
 })
 
-export type Pathnames = keyof typeof routing.pathnames
 export type Locale = (typeof routing.locales)[number]
