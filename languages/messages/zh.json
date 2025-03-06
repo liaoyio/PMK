@@ -1,0 +1,18 @@
+{
+  "Error": {
+    "description": "<p>很抱歉，我们遇到了一个错误。</p><p>您可以尝试<retry>重新加载页面</retry>。</p>",
+    "title": "发生了错误！"
+  },
+
+  "LocaleLayout": {
+    "title": "next-intl 示例"
+  },
+  "LocaleSwitcher": {
+    "label": "切换语言",
+    "locale": "{locale, select, de {🇩🇪 德语} en {🇺🇸 英语} other {未知}}"
+  },
+  "NotFoundPage": {
+    "description": "请检查浏览器地址栏，或使用导航前往已知页面。",
+    "title": "页面未找到"
+  }
+}
